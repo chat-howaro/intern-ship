@@ -1,0 +1,28 @@
+<div class="userpage">
+
+<div class="h">
+<h2>ログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="personal">
+      <%= f.label :メールアドレス %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    
+      <br><%= f.label :パスワード %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    
+      <br><% if devise_mapping.rememberable? %>
+    
+      <br><%= f.check_box :remember_me %><br />
+      <%= f.label :パスワードを記憶する %>
+
+      <br><%= f.submit "Log in" %><br />
+      <br><%= render "users/shared/links" %><br />
+    </div>
+  <% end %>
+    
+    
+  <% end %>
+</div>
+
+

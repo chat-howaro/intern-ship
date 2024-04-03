@@ -1,0 +1,60 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<div class="index1">
+
+
+  
+  <div class="ichiran">
+    <h2>投稿一覧</h2>
+  </div>
+
+
+    <h3>投稿を検索</h3>
+      <div class="kensaku">
+        <%= form_tag({controller:"tweets",action:"index"}, method: :get) do %>
+          <%= text_field_tag :search %>
+          <%= submit_tag '検索する'  %>
+          <% end %>
+      </div>
+  
+      <div class="tweets-container">
+        <% @tweets.each do |t| %>
+
+        <div class="tweet">
+
+          <div class="star">
+            <h2>総合評価：</h2>
+            <span class="star-rating">
+              <span class="star-rating-front" style="width: <p><%= getPercent(t.overall) %>%;">★★★★★</span></p>
+              <span class="star-rating-back">★★★★★</span>
+              
+            </span> 
+          
+            
+          </div>
+
+          <div class="usercomment">
+            <br><%= image_tag t.image_url, size: "250x200" if t.image? %></br>
+            <br>ユーザー：<%= t.user.email %></br>
+            <br>雰囲気：<%= t.mood %></br>
+            <br>業務内容：<%= t.content %></br>
+            <br>感じたこと：<%= t.surprising %></br>
+            <br>コメント：<%= t.comment %></p></br>
+        
+          </h2>
+          
+          <%= link_to "詳細へ", tweet_path(t.id) %>
+          <%= link_to "編集する", edit_tweet_path(t.id) %>
+          <br><%= button_to "削除する", tweet_path(t.id), method: :delete %></br> 
+
+          </div>
+          <p class="time"><%= t.created_at %></p>
+  
+        </div>
+
+      <% end %>
+      
+    </div>
+</div>
+    
+

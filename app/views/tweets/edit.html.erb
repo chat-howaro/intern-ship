@@ -1,0 +1,42 @@
+<%= form_for @tweet do |f| %>
+
+    <%= f.label :企業名 %>
+    <%= f.text_field :company %>
+    <%= f.label :時給 %>
+    <%= f.text_field :saraly %>  
+    <%= f.label :インターン募集を知った経緯 %>
+    <%= f.text_field :root %> 
+    <%= f.label :面接有無 %>
+    <%= f.text_field :interview %> 
+    <%= f.label :勤務時間 %>
+    <%= f.text_field :hour %> 
+    <%= f.label :雰囲気 %>
+    <%= f.text_field :mood %>
+    <%= f.label :業務内容 %>
+    <%= f.text_field :content %> 
+    <%= f.label :インターン情報に記載されてなかったこと %>
+    <%= f.text_field :surprising %>
+    <%= f.label :インターンの感想 %>
+    <%= f.text_field :comment %> 
+    <h5>総合評価</h5>
+    <%= f.radio_button :overall, 5 ,id: 'star1'%>
+    <label for="star1"><span class="text">かなりおすすめ</span>★</label>
+
+    <%= f.radio_button :overall, 4 ,id: 'star2'%>
+    <label for="star2"><span class="text">おすすめ</span>★</label>
+
+    <%= f.radio_button :overall, 3 ,id: 'star3'%>
+    <label for="star3"><span class="text">普通</span>★</label>
+
+    <%= f.radio_button :overall, 2 ,id: 'star4'%>
+    <label for="star4"><span class="text">あまりおすすめしない</span>★</label>
+
+    <%= f.radio_button :overall, 1 ,id: 'star5'%>
+    <label for="star5"><span class="text">微妙</span>★</label>
+
+    <%= f.submit "編集する" %>
+
+
+  
+  <% end %>
+  

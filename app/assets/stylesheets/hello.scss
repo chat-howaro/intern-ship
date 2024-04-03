@@ -1,0 +1,56 @@
+// Place all the styles related to the hello controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+img {
+    vertical-align: middle;
+  }
+
+.top1{
+    width:100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.top1-login{
+    width: 400px;
+    height: 200px; 
+    position: absolute;
+    left: 565px;
+    top:50%;
+    background-color: aliceblue;
+    border-radius: 60px;
+    border: solid 2px #fbf8f8;
+    text-align:center;
+}
+
+.top1-login2{
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+
+
+.toppage1{
+    width:100%;
+
+}
+
+.top2{
+    width:100%;
+
+}
+
+
+
+.toppage2{
+    width:100%;
+
+}
+
+.toppage3{
+    width:100%;
+    position: relative;
+    margin: 0 auto;
+}

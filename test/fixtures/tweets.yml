@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  saraly: 1
+  root: MyString
+  hour: MyString
+  mood: MyString
+  content: MyText
+  surprising: MyText
+  comment: MyText
+
+two:
+  company: MyString
+  saraly: 1
+  root: MyString
+  hour: MyString
+  mood: MyString
+  content: MyText
+  surprising: MyText
+  comment: MyText

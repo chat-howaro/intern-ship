@@ -1,0 +1,30 @@
+<h1>マイページ</h1>
+<p>ユーザーネーム : <%= @user.name %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<p>プロフィール : <%= @user.profile %></p>
+<%= image_tag @user.image_url, size: "250x200" if @user.image? %>
+
+<% if current_user.id == @user.id %>
+  <%= link_to "編集する", edit_user_registration_path %>
+<% end %>
+
+
+<h2>ユーザーの投稿一覧</h2>
+<% @user.tweets.each do |t| %>
+  <%= t.user.name %>
+  <%= t.company %>
+  <%= t.saraly %>
+  <%= t.root %>
+  <%= t.hour %>
+  <%= t.mood %>
+  <%= t.content %>
+  <%= t.surprising %>
+  <%= t.comment %>
+  <%= t.interview %>
+  <%= t.overall %>
+<% end %>
+
+
+
+<%= link_to "Tweet一覧に戻る", tweets_path %>
+
