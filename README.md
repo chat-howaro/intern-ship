@@ -1,24 +1,16 @@
-# README
+# インターンシップ口コミサイト
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[長期インターンの口コミサイトを3ヶ月で作りました。口コミ投稿サイトと詳細ページ、ログイン画面、星評価を入れました。]
 
-Things you may want to cover:
+## 機能一覧
 
-* Ruby version
+- 口コミ投稿機能
+- 口コミ詳細ページ表示機能
+- ログイン機能
+- 星評価機能
+- マイページ
+- ホーム画面
+- 新規登録ページ
 
-* System dependencies
+![サンプル画像1]("C:\Users\taka0717\Downloads\page.png")
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
