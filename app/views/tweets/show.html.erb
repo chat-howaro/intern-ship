@@ -1,0 +1,64 @@
+<%= stylesheet_link_tag 'show', :media => "all" %>
+<div class="showpage">
+<h3>投稿詳細</h3>
+
+
+<div class="show-tweets-container">
+  <div class="show-tweet">
+  
+  
+
+    <div class="information">
+      <br>会社名：<%= @tweet.company %></br>
+      <br>時給：<%= @tweet.saraly %></br>
+      <br>使用したサイト：<%= @tweet.root %></br>
+      <br>面接：<%= @tweet.interview %></br>
+      <br>勤務時間：<%= @tweet.hour%></br>
+
+      
+        <div class="edit">
+        <br><%= link_to "編集する", edit_tweet_path(@tweet.id) %></br>
+        </div>
+    </div>
+  </div>
+</div>
+
+    
+  <div class="edit">
+    <div class="comment">
+      <h3>-質問投稿-</h3>
+    </div>
+  </div>
+  <% @comments.each do |c| %>
+    <div class="comment-wrapper">
+      <%= c.user.email unless c.user.blank? %>
+      <br>
+      <%= c.content %>
+      <br>
+      <%= button_to "削除する", tweet_comment_path(c.tweet.id, c.id), method: :delete %>
+  </div>
+
+      <br>
+  <% end %>
+
+  
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@tweet, @comment], local: true) do |f| %>
+      <%= f.text_area :content %>
+      <%= button_tag type: "submit" do %>
+
+
+        <i class="far fa-comments"></i> コメントする
+       
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+
+  
+ 
+

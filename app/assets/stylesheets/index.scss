@@ -1,0 +1,70 @@
+.index1 {
+  height: 1800px;
+  width: 100%;
+  background-image: url(../assets/index1.jpg);
+  background-size: cover;
+}
+
+
+.tweets-container {
+    width: 50%;
+    margin: 10px auto;
+  }
+  
+
+  .usercomment {
+    width: 100%;
+    text-align: center;
+    
+  }
+
+  .main-box {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .time {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+ .kensaku {
+    width: 100%;
+    text-align: center;
+    
+  }
+
+ .ichiran {
+    width: 100%;
+    text-align: center;
+ }
+
+ 
+
+ .tweet{
+  width: 800px;
+  height: auto; 
+  background-color: aliceblue;
+  border-radius: 60px;
+  border: solid 2px #fbf8f8;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  margin-bottom: 30px;
+ }
+
+ .usercomment {
+  width: 100%;
+  text-align: center;
+  
+}
+
+
+.star {
+  width: 100%;
+  text-align: center;
+
+}
+

@@ -1,0 +1,67 @@
+<%= stylesheet_link_tag 'new', :media => "all" %>
+<div class="tweetnew">
+
+<h3>新規投稿</h3>
+
+<%= form_for @tweet do |f| %>
+  <div class="field">
+  <br><%= f.label :企業名 %></br>
+    <%= f.text_field :company %>
+
+    <br><%= f.label :時給 %></br>
+    <%= f.number_field :saraly %>
+
+    <br><%= f.label :インターン募集を知った経緯 %></br>
+    <%= f.select :root, 
+    [["マイナビ", "マイナビ"], 
+    ["リクナビ", "リクナビ"]], include_blank: "選択して下さい" %>
+
+    <br><%= f.label :面接有無 %></br>
+    <%= f.select :interview, 
+    [["あり", "あり"], 
+    ["なし", "なし"]], include_blank: "選択して下さい" %>
+
+    <br><%= f.label :勤務時間 %></br>
+    <%= f.text_field :hour %>
+
+    <br><%= f.label :雰囲気 %></br>
+    <%= f.text_field :mood %>
+
+    <br><%= f.label :業務内容 %></br>
+    <%= f.text_field :content %>
+
+    <br><%= f.label :インターン情報に記載されてなかったこと %></br>
+    <%= f.text_field :surprising %>
+
+    <br><%= f.label :インターンの感想 %></br>
+    <%= f.text_field :comment %>
+
+    <br><h5>総合評価</h5></br>
+    <%= f.radio_button :overall, 5 ,id: 'star1'%>
+    <label for="star1"><span class="text">かなりおすすめ</span>★</label>
+
+    <%= f.radio_button :overall, 4 ,id: 'star2'%>
+    <label for="star2"><span class="text">おすすめ</span>★</label>
+
+    <%= f.radio_button :overall, 3 ,id: 'star3'%>
+    <label for="star3"><span class="text">普通</span>★</label>
+
+    <%= f.radio_button :overall, 2 ,id: 'star4'%>
+    <label for="star4"><span class="text">あまりおすすめしない</span>★</label>
+
+    <%= f.radio_button :overall, 1 ,id: 'star5'%>
+    <label for="star5"><span class="text">微妙</span>★</label>
+
+    <br><div class="picture"></br>
+    <%= f.label :image %>
+    <br> <%= f.file_field :image %></br>
+
+    <br><%= f.submit "Tweetする" %></br>
+  <% end %>
+    
+  </div>
+
+  <br><%= link_to "Tweet一覧に戻る", tweets_path %></br>
+  
+ 
+

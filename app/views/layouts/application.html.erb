@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>キャリレポ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+  <body>
+  <header>
+    <h1>キャリレポ</h1>
+    
+    <div class="header-list">
+    <li><%= link_to "", root_path %></li>
+    <ul>
+      <li><%= link_to "ホーム", root_path %></li>
+      <li><%= link_to "新規投稿",new_tweet_path %></li>
+
+      
+      
+      <% if user_signed_in? %>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "マイページへ", user_path(current_user.id) %></li>
+  <% end %>
+    </ul>
+    </div>
+  </header>
+  <main>
+    <%= yield %>
+    
+    </main>
+    <footer>
+   <p>Copyright © GeekSalon All Rights Reserved.</p>
+ </footer>
+
+  </body>
+</html>
+
+
